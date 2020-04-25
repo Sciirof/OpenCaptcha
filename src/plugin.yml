@@ -1,0 +1,33 @@
+main: com.pigeoncraft.opencaptcha.Main
+name: OpenCaptcha
+version: 1.0
+author: Sciirof
+
+api-version: 1.15
+
+commands:
+  oc:
+    description: Displays command help
+  captcha:
+    description: Displays command help
+  oc bypass:
+    usage: /oc bypass
+    permission: opencaptcha.bypass
+  captcha bypass:
+    usage: /oc bypass
+    permission: opencaptcha.bypass
+  oc bypass player:
+    usage: /oc bypass [player]
+    permission: opencaptcha.admin
+  captcha bypass player:
+    usage: /captcha bypass [player]
+    permission: opencaptcha.admin
+permissions:
+  opencaptcha.*:
+    children:
+      opencaptcha.bypass: true
+      opencaptcha.admin: true
+  opencaptcha.bypass:
+    default: op
+  opencaptcha.admin:
+    default: op
