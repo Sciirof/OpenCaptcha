@@ -38,6 +38,7 @@ public class PlayerListener implements Listener {
 		url = "http://image.captchas.net?client=" + plugin.getConfig().getString("user") + "&random=" + secret + "&width=150&height=150";
 		String answer = calcAnswer(plugin.getConfig().getString("key") + "" + secret);
 		ItemStack map = new ItemStack(Material.FILLED_MAP, 1);
+		player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("prefix") + "&aType what you see on the map"));
 		player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("prefix") + "&aCan't see it too well? Use the link to view the image:"));
 		player.sendMessage(ChatColor.GREEN + "" + url);
 		player.getInventory().clear();

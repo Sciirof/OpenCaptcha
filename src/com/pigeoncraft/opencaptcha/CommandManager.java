@@ -35,6 +35,9 @@ public class CommandManager implements CommandExecutor {
 							return true;
 						}
 					}
+					if(args[0].equalsIgnoreCase("reload")) {
+						plugin.reloadConfig();
+					}
 					if(args.length > 1) {
 						Player player = Bukkit.getPlayerExact(args[1]);
 						if(player != null) {

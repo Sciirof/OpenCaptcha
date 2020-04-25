@@ -22,6 +22,12 @@ commands:
   captcha bypass player:
     usage: /captcha bypass [player]
     permission: opencaptcha.admin
+  oc reload:
+    usage: /oc reload
+    permission: opencaptcha.admin
+  captcha reload:
+    usage: /oc reload
+    permission: opencaptcha.admin
 permissions:
   opencaptcha.*:
     children:
